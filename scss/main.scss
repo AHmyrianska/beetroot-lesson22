@@ -1,0 +1,82 @@
+@import 'vars';
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+}
+ul,
+ol,
+dl {
+    margin: 0 0;
+}
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Lato, sans-serif;
+    font-size: $font_size_main;
+    color: $font_color_main;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: $background_main;
+}
+.header,
+.section,
+.footer {
+    padding: 0 40px;
+    @media screen and (max-width: 1200px) {
+        padding: 0 40px;
+    }
+    @media screen and (max-width: 992px) {
+        padding: 0 40px;
+    }
+    @media screen and (max-width: 768px) {
+        padding: 0 15px;
+    }
+}
+.btn {
+    font-family: Lato, sans-serif;
+    padding: 33px 95px 33px 90px;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    background: transparent;
+    color: #F1897B;
+    text-transform: uppercase;
+    border: 1px solid #E4E4E4;
+    &__text {
+        position: relative;
+        @media screen and (max-width: 992px){
+            font-size: 30px;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -8%;
+            left: 7%;
+            width: 100%;
+            height: 13px;
+            background: #F1897B;
+            opacity: 0.3;
+        }
+    }
+}
+
+.gallery {
+    width: 800px;
+    height: 500px;
+    background: url('../assets/img/HeaderBackground.png') no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    @media screen and (max-width: 992px) {
+        background: url('../assets/img/HeaderBackgroundtablet.png') no-repeat;
+    }
+
+    @media screen and (max-width: 768px) {
+        background: url('../assets/img/HeaderBackgroundmobile.png') no-repeat;
+    }
+}
